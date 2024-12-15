@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 25px;
+}
+body{
+    font-family: Arial, sans-serif;
+line-height: 1.6;
+overflow-x: hidden;
+background-image: url(WhatsApp\ Image\ 2024-12-10\ at\ 20.12.11.jpeg);
+background-size: contain;
+background-repeat:no-repeat;
+background-attachment: fixed;
+}
+header{
+    background: #c50900;
+color: yellow;
+padding-top: 20px;
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1;
+transition: gray 0.3s ease;
+}
+header.scrolled{
+    background: #ff0000;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2) ;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+.logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+.nav-links li{
+display: inline;
+}
+.nav-links a{
+    color: #e8ef1c;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: yellow 0.3s ease;
+}
+.nav-links a:hover{
+    color: #ebd1ca;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    float: right;
+}
+.shinchan{
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.shinchan span{
+    width: 25px;
+    height: 3px;
+    background: #ffef3d;
+}
+.hero{
+    text-align: center;
+    padding: 5rem 1rem;
+    margin-top: 70px;
+    color: #060303;
+    float: right;
+}
+.hero h1{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.cta {
+    background: #fff;
+    color: #efb11d;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#about{
+    color: rgb(6, 6, 6);
+}
+.cta:hover {
+    background: #007bff;
+    color: #fff;
+    border: 1px solid #fff;
+}
+#about, #family, #more{
+    float: right;
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .shinchan {
+        display: flex;
+    }
+}
